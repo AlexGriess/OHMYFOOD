@@ -1,6 +1,7 @@
 @use "../utils/variables.scss";
 @use "../utils/mixins.scss";
 
+/* Section restaurants */
 .restaurant{
     text-align: center;
     background-color: variables.$grey-mild;
@@ -12,10 +13,10 @@
        min-width: 20%;
        @include mixins.padding20;
     }
+    /* Boutton décoratif Nouveau */
     .new{
         position: relative;
-    }
-
+    }   
     .new::before {
         content:"Nouveau";
         position: absolute;
@@ -28,11 +29,11 @@
         width: 6rem;
         right: 2rem;
         top: 2rem;
-        font-weight: bold;
-
-    }
+        font-weight: bold;  
+    }   
 }
 
+/* Les card des restaurants */
 .card{
     @include mixins.box-shadow;
     border-radius: 2rem;
@@ -47,6 +48,7 @@
             }
         }
     }
+    /* La description des card */
     &__description{
         position: relative;
         h3{
@@ -57,11 +59,24 @@
             margin: 0px 0px 0px 0px;
             padding: 0rem 1rem 1rem 1rem;
         }
+        /* Icone et animation du coeur */
         i{
             font-size: 2rem;
             position: absolute;
             right: 1.5rem;
             top: 33%;
         }
+        .fa-solid{
+            @include mixins.maingradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            opacity: 0;
+            transition: all .3s ease-in-out;
+            &:hover{
+                opacity: 1;
+                transform: scale(1.1);
+            }
+        }
     }
-}
+ }
