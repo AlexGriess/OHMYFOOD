@@ -3,6 +3,7 @@
 
 .fonctionnement{
     text-align: center;
+    padding: 20px 20px 20px 20px;
     ol{
         position: relative;
         width: 100%;
@@ -21,7 +22,7 @@
         text-align: left;
         border-radius: 25px;
         padding: 20px 20px 20px 20px;
-        margin: auto 10px auto 10px;
+        margin: auto 15px auto 15px;
         font-weight: bold;
         @include mixins.box-shadow;
         @media (max-width: 767px) {

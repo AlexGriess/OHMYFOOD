@@ -4,6 +4,7 @@
 .restaurant{
     text-align: center;
     background-color: variables.$grey-mild;
+    padding: 20px 20px 20px 20px;
     &__menus{
        display: grid;
        grid-template-columns: 1fr 1fr; 
@@ -13,7 +14,6 @@
     }
     .new{
         position: relative;
-        border: red;
     }
 
     .new::before {
@@ -48,9 +48,20 @@
         }
     }
     &__description{
+        position: relative;
+        h3{
+            margin: 0px 0px 0px 0px;
+            padding: 1rem 1rem .5rem 1rem;
+        }
         p{
             margin: 0px 0px 0px 0px;
-            padding: 0rem 1rem 0rem 1rem;
+            padding: 0rem 1rem 1rem 1rem;
+        }
+        i{
+            font-size: 2rem;
+            position: absolute;
+            right: 1.5rem;
+            top: 33%;
         }
     }
 }

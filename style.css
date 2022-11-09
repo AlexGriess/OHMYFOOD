@@ -23,11 +23,6 @@ h2 {
   margin: 0px 0px 0px 0px;
 }
 
-h3 {
-  margin: 0px 0px 0px 0px;
-  padding: 1rem 1rem 0.5rem 1rem;
-}
-
 /* Header */
 header {
   font-family: "Shrikhand";
@@ -81,6 +76,7 @@ header {
 
 .fonctionnement {
   text-align: center;
+  padding: 20px 20px 20px 20px;
 }
 .fonctionnement ol {
   position: relative;
@@ -102,7 +98,7 @@ header {
   text-align: left;
   border-radius: 25px;
   padding: 20px 20px 20px 20px;
-  margin: auto 10px auto 10px;
+  margin: auto 15px auto 15px;
   font-weight: bold;
   box-shadow: 0px 3px 5px rgb(204, 204, 204);
 }
@@ -137,6 +133,7 @@ header {
 .restaurant {
   text-align: center;
   background-color: #ebebeb;
+  padding: 20px 20px 20px 20px;
 }
 .restaurant__menus {
   display: grid;
@@ -147,7 +144,6 @@ header {
 }
 .restaurant .new {
   position: relative;
-  border: red;
 }
 .restaurant .new::before {
   content: "Nouveau";
@@ -186,9 +182,22 @@ header {
 .card__image--image4 {
   background-image: url(images/restaurants/restaurant-4.jpg);
 }
+.card__description {
+  position: relative;
+}
+.card__description h3 {
+  margin: 0px 0px 0px 0px;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
 .card__description p {
   margin: 0px 0px 0px 0px;
-  padding: 0rem 1rem 0rem 1rem;
+  padding: 0rem 1rem 1rem 1rem;
+}
+.card__description i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 33%;
 }
 
 /* Le footer */
