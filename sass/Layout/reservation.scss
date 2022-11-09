@@ -1,0 +1,29 @@
+@use "../utils/variables.scss";
+@use "../utils/mixins.scss";
+
+/* Section de reservation */
+.reservation{
+    text-align: center;
+    background-color: variables.$grey-light;
+    
+    /* Boutton explorer */
+    button{
+        border:none;
+        padding: 15px 15px 15px 15px;
+        background: linear-gradient(183deg, rgba(255,121,218,1) 35%, rgba(147,86,220,1) 100%);
+        margin: 20px auto 30px auto;
+        border-radius: 25px;
+        color: white;
+        font-size: 16px;
+    }
+    button:hover{
+        @include mixins.box-shadow;
+        transition: 0.5s;
+    }
+    h2{
+        font-size: 24px;
+        margin: 0px;
+        padding: 20px 0px 10px 0px;
+    }
+    
+}

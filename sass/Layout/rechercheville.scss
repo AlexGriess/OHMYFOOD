@@ -1,0 +1,17 @@
+@use "../utils/variables.scss";
+
+/* Formulaire de recherche de ville */
+.rechercheville{
+    display:flex;
+    justify-content: center;
+    gap: 1.5rem;
+    background-color: variables.$grey-mild;
+    text-align: center;
+    padding: 15px;
+    &__input{
+        border: hidden;
+        background: none;
+        text-align: center;
+        font-size: 16px;
+    }
+}

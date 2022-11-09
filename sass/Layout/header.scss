@@ -1,0 +1,11 @@
+@use "../utils/mixins.scss";
+
+/* Header */
+header{
+    font-family: "Shrikhand";
+    text-align: center;
+    margin: 0;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    @include mixins.box-shadow;
+}

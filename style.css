@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header */
+header {
+  font-family: "Shrikhand";
+  text-align: center;
+  margin: 0;
+  padding: 10px 10px 10px 10px;
+  position: relative;
+  box-shadow: 0px 3px 5px rgb(204, 204, 204);
+}
+
+/* Formulaire de recherche de ville */
+.rechercheville {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: #ebebeb;
+  text-align: center;
+  padding: 15px;
+}
+.rechercheville__input {
+  border: hidden;
+  background: none;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Section de reservation */
+.reservation {
+  text-align: center;
+  background-color: #f2f2f2;
+  /* Boutton explorer */
+}
+.reservation button {
+  border: none;
+  padding: 15px 15px 15px 15px;
+  background: linear-gradient(183deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%);
+  margin: 20px auto 30px auto;
+  border-radius: 25px;
+  color: white;
+  font-size: 16px;
+}
+.reservation button:hover {
+  box-shadow: 0px 3px 5px rgb(204, 204, 204);
+  transition: 0.5s;
+}
+.reservation h2 {
+  font-size: 24px;
+  margin: 0px;
+  padding: 20px 0px 10px 0px;
+}
+
+.fonctionnement {
+  text-align: center;
+}
+.fonctionnement ol {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .fonctionnement ol {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.fonctionnement li {
+  width: 30%;
+  background-color: #f2f2f2;
+  color: #323232;
+  text-align: left;
+  border-radius: 25px;
+  padding: 20px 20px 20px 20px;
+  margin: auto 10px auto 10px;
+  font-weight: bold;
+  box-shadow: 0px 3px 5px rgb(204, 204, 204);
+}
+@media (max-width: 767px) {
+  .fonctionnement li {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+.fonctionnement li:hover {
+  background-color: #e2cbff;
+}
+.fonctionnement li:hover > i {
+  color: #9356DC;
+}
+.fonctionnement li span {
+  position: absolute;
+  background-color: #9356DC;
+  color: white;
+  text-align: center;
+  border-radius: 25px;
+  line-height: 25px;
+  width: 25px;
+  margin-top: 5px;
+  margin-left: -30px;
+}
+.fonctionnement li i {
+  padding: 10px 10px 10px 10px;
+  color: #858585;
+}
+
+/* Le footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #323232;
+  color: white;
+  margin-bottom: 0px;
+  /* Le logo du footer */
+  /* Les liens du footer */
+}
+.footer h4 {
+  font-family: Shrikhand;
+  font-size: 24px;
+  margin: 0px;
+  padding: 20px 20px 20px 20px;
+}
+.footer ul {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  padding: 20px 20px 20px 20px;
+}
+.footer a {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */
