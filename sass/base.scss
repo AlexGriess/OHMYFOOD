@@ -1,3 +1,4 @@
+@use "./utils/mixins.scss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
 
@@ -9,7 +10,22 @@
     list-style-type: none;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 body{
     margin: 0px;
     font-family: "Roboto", sans-serif;
+}
+
+h2{
+    @include mixins.padding20;
+    margin: 0px 0px 0px 0px;
+}
+
+h3{
+    margin: 0px 0px 0px 0px;
+    padding: 1rem 1rem .5rem 1rem;
 }
