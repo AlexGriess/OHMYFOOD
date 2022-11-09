@@ -1,0 +1,53 @@
+@use "../utils/variables.scss";
+@use "../utils/mixins.scss";
+
+.banniere{
+    img{
+        display: flex;
+        width: 100%;
+        object-fit: cover;
+        height: 85vh;
+    }
+}
+
+.restaurants{ 
+    position: relative;
+    margin-top:-60px;
+    background-color: variables.$grey-light;
+    border-radius: 25px 25px 0px 0px;
+    &__titre{
+    display: flex;
+    justify-content: center;
+    font-family: "Shrikhand";
+    align-items: center;
+    position: relative;
+    padding: 20px 20px 20px 20px;
+    i{
+        font-size: 2rem;
+        position: absolute;
+        right: 35%;
+    }
+    .fa-solid{
+        @include mixins.maingradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 0;
+        transition: all .3s ease-in-out;
+        &:hover{
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    }
+    } 
+}
+
+.menu {
+    &__group{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-items: center;
+        padding: 20px 10px 10px 10px;
+    }
+}
+

@@ -28,10 +28,13 @@ h2 {
 header {
   font-family: "Shrikhand";
   text-align: center;
-  margin: 0;
+  margin: 0px;
   padding: 10px 10px 10px 10px;
   position: relative;
   box-shadow: 0px 3px 5px rgb(204, 204, 204);
+}
+header h1 {
+  margin: 0px;
 }
 
 /* Formulaire de recherche de ville */
@@ -244,6 +247,52 @@ header {
 }
 .footer a {
   color: white;
+}
+
+.banniere img {
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+  height: 85vh;
+}
+
+.restaurants {
+  position: relative;
+  margin-top: -60px;
+  background-color: #f2f2f2;
+  border-radius: 25px 25px 0px 0px;
+}
+.restaurants__titre {
+  display: flex;
+  justify-content: center;
+  font-family: "Shrikhand";
+  align-items: center;
+  position: relative;
+  padding: 20px 20px 20px 20px;
+}
+.restaurants__titre i {
+  font-size: 2rem;
+  position: absolute;
+  right: 35%;
+}
+.restaurants__titre .fa-solid {
+  background: linear-gradient(183deg, rgb(255, 121, 218) 35%, rgb(147, 86, 220) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.restaurants__titre .fa-solid:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.menu__group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  padding: 20px 10px 10px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

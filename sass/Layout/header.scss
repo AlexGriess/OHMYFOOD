@@ -4,8 +4,11 @@
 header{
     font-family: "Shrikhand";
     text-align: center;
-    margin: 0;
+    margin: 0px;
     padding: 10px 10px 10px 10px;
     position: relative;
     @include mixins.box-shadow;
+    h1{
+        margin: 0px;
+    }
 }
