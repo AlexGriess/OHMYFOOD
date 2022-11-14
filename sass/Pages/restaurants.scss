@@ -1,15 +1,24 @@
 @use "../utils/variables.scss";
 @use "../utils/mixins.scss";
+@use "../utils/animation.scss";
 
+/* Le header */
+.headericone{
+    position:absolute;
+    left:22px;
+    top:22px;
+    font-size: 24px;
+}
+/* La bannière */
 .banniere{
     img{
         display: flex;
         width: 100%;
         object-fit: cover;
-        height: 85vh;
+        height: 400px;
     }
 }
-
+/* Le titre du restaurant */
 .restaurants{ 
     position: relative;
     margin-top:-60px;
@@ -20,34 +29,131 @@
     justify-content: center;
     font-family: "Shrikhand";
     align-items: center;
-    position: relative;
     padding: 20px 20px 20px 20px;
-    i{
-        font-size: 2rem;
-        position: absolute;
-        right: 35%;
+    @media (max-width: 767px) {
+        justify-content: space-between;
+        }
+    @include mixins.heart-animation;
     }
-    .fa-solid{
-        @include mixins.maingradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        opacity: 0;
-        transition: all .3s ease-in-out;
-        &:hover{
-            opacity: 1;
-            transform: scale(1.1);
+        i{
+            @media (max-width: 992px) {
+            right: 25%;
+            }
+            @media (max-width: 767px) {
+            right: 5%;
+            }
+        }
+}
+/* Les menus */
+.menu {
+    display:flex;
+    justify-content: space-around;
+    margin : 0px 30px 0px 30px;
+    @media (max-width: 992px) {
+        flex-direction: column;
+    }
+    h3{
+        color: variables.$black-light;
+        padding: 1rem 1rem .5rem 0rem;
+    }
+    &__separation{
+        width: 30%;
+        border-top: solid 3px #99e2d0;
+        border-top-width: 3px;
+    }   
+    &__group{
+        @for $i from 1 through 3{
+            &:nth-child(#{$i}) {
+                animation-delay: 300ms *$i;
+            }
+        }
+        overflow:hidden;
+        width: 33%;
+        animation: appear 2s;
+        animation-fill-mode: both;
+        @media (max-width: 992px) {
+            width: 100%;
+            margin-bottom: 20px;
         }
     }
-    } 
-}
-
-.menu {
-    &__group{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        place-items: center;
-        padding: 20px 10px 10px 10px;
+    /* Block des plats */ 
+    &-item{
+        display:flex;
+        background-color: white;
+        border-radius: 15px;
+        margin: 15px 15px 15px 0px;
+        overflow:hidden;
+        @include mixins.box-shadow;
+        &__description{
+            overflow:hidden;
+        }
+        &__prix{
+            margin-left:auto;
+            display:flex;
+            align-items: flex-end;       
+            font-weight: bold;
+            padding: 15px 25px 15px 15px;         
+            p{
+                margin: 0px, 0px, 10px, auto;
+                padding:0px;
+                font-weight: bold;
+            }
+        }
+        /* L'icone check avec animation */
+        &__check{
+            background-color: variables.$color-tertiaire;
+            margin-right: -4rem;
+            width: 4rem;
+            display: grid;
+            place-items: center;
+            border-radius: 0 1rem 1rem 0; 
+            opacity: 0;
+            transition: margin-right 1s; 
+            i{
+                display: grid;
+                place-items: center;
+                background: white;
+                aspect-ratio: 1;
+                width: 2rem;
+                border-radius: 1rem;  
+                color: variables.$color-tertiaire;             
+            }
+        }
+        &:hover .menu-item__check{
+            opacity: 1;
+            margin-right: 0;
+            i{
+                animation: spin .5s ease-in-out;    
+            }
+        }
+    }
+    h4{
+        margin:0px;
+        padding:15px 15px 0px 15px;
+        overflow:hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    p{
+        color: variables.$grey-dark;
+        margin: 0px 0px 0px auto;
+        padding:0px 15px 10px 15px;
+        overflow:hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }
-
+/* Boutton commander */ 
+.order{
+    background-color: variables.$grey-light;
+    padding: 1rem 1rem 2rem 1rem;
+    display: grid;
+    place-items: center;
+    button{
+        @include mixins.main-button;
+        width: 25%;
+        @media (max-width: 767px) {
+        width: 50%;
+        }
+    }
+}

@@ -15,7 +15,7 @@
     </header>
     <main>
         <!-- Section de recherche de ville -->
-        <section class="rechercheville">
+        <div class="rechercheville">
             <!-- Formulaire de recherche de ville -->
             <form method="post" action="#">
                 <div>
@@ -23,12 +23,12 @@
                     <input type="search" placeholder="Paris, Belleville" class="rechercheville__input"/>
                 </div>
             </form>				
-        </section>
+        </div>
         <!-- Section reservation et exploration -->
         <section class="reservation">
             <h2>Réservez le menu qui vous convient</h2>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <button class="reservation__button">Explorer nos restaurants</button>
+            <button>Explorer nos restaurants</button>
         </section>
         <!-- Section fonctionnement -->
         <section class="fonctionnement">
@@ -54,7 +54,7 @@
             <!-- Bloc les 4 restaurants -->
             <div class="restaurant__menus">
                 <!-- Les card des restaurants -->
-                <a href="" class="card new">
+                <a class="card new" href="/menu/restaurants1.html">
                     <div class="card__image card__image--image1"></div>
                     <!-- La description des card -->
                     <div class="card__description">

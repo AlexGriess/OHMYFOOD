@@ -12,6 +12,9 @@
        gap: 2rem;
        min-width: 20%;
        @include mixins.padding20;
+       @media (max-width: 992px) {
+        grid-template-columns: auto;
+    }
     }
     /* Boutton décoratif Nouveau */
     .new{
@@ -51,10 +54,6 @@
     /* La description des card */
     &__description{
         position: relative;
-        h3{
-            margin: 0px 0px 0px 0px;
-            padding: 1rem 1rem .5rem 1rem;
-        }
         p{
             margin: 0px 0px 0px 0px;
             padding: 0rem 1rem 1rem 1rem;
