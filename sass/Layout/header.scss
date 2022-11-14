@@ -1,4 +1,6 @@
+@use "../utils/variables.scss";
 @use "../utils/mixins.scss";
+@use "../utils/animation.scss";
 
 /* Header */
 header{
@@ -12,3 +14,19 @@ header{
         margin: 0px;
     }
 }
+
+.loader{
+    position:fixed;
+    background-color: white;
+    display: grid;
+    place-items: center;
+    height:100vh;
+    z-index: 1;
+    inset: 0;
+    opacity: 0.9;
+    transform-origin: top;
+    color: variables.$color-primaire;
+    visibility: visible;
+    animation: disappear 1s 3s forwards;  
+}
+

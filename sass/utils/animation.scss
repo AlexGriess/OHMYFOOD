@@ -17,3 +17,11 @@
         transform:scale(1)
     }
 }
+
+@keyframes disappear {
+    to{
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility, opacity;
+    }
+}
