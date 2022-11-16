@@ -1,6 +1,14 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+@keyframes spin {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 @keyframes appear {
   0% {
     transform: scale(0);
@@ -22,6 +30,8 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -51,19 +61,7 @@ p {
   padding: 1rem;
 }
 
-/* Header */
-header {
-  font-family: "Shrikhand";
-  text-align: center;
-  margin: 0px;
-  padding: 10px 10px 10px 10px;
-  position: relative;
-  box-shadow: 0px 3px 5px rgb(193, 193, 193);
-}
-header h1 {
-  margin: 0px;
-}
-
+/* Loader */
 .loader {
   position: fixed;
   background-color: white;
@@ -77,6 +75,19 @@ header h1 {
   color: #9356DC;
   visibility: visible;
   animation: disappear 1s 3s forwards;
+}
+
+/* Header */
+header {
+  font-family: "Shrikhand";
+  text-align: center;
+  margin: 0px;
+  padding: 10px 10px 10px 10px;
+  position: relative;
+  box-shadow: 0px 3px 5px rgb(193, 193, 193);
+}
+header h1 {
+  margin: 0px;
 }
 
 /* Formulaire de recherche de ville */
@@ -131,7 +142,8 @@ header h1 {
 /* Section fonctionnement */
 .fonctionnement {
   text-align: center;
-  padding: 20px 20px 20px 20px;
+  padding: 20px 0px 20px 0px;
+  list-style-type: none;
 }
 .fonctionnement ol {
   position: relative;
@@ -399,7 +411,7 @@ header h1 {
   padding: 1rem 1rem 0.5rem 0rem;
 }
 .menu__separation {
-  width: 30%;
+  width: 15%;
   border-top: solid 3px #99e2d0;
   border-top-width: 3px;
 }
@@ -444,7 +456,7 @@ header h1 {
   padding: 15px 25px 15px 15px;
 }
 .menu-item__prix p {
-  margin: 0px, 0px, 10px, auto;
+  margin: 0px 0px 10px auto;
   padding: 0px;
   font-weight: bold;
 }
@@ -462,7 +474,7 @@ header h1 {
   display: grid;
   place-items: center;
   background: white;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   width: 2rem;
   border-radius: 1rem;
   color: #99E2D0;

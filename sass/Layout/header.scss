@@ -2,19 +2,7 @@
 @use "../utils/mixins.scss";
 @use "../utils/animation.scss";
 
-/* Header */
-header{
-    font-family: "Shrikhand";
-    text-align: center;
-    margin: 0px;
-    padding: 10px 10px 10px 10px;
-    position: relative;
-    @include mixins.box-shadow;
-    h1{
-        margin: 0px;
-    }
-}
-
+/* Loader */
 .loader{
     position:fixed;
     background-color: white;
@@ -29,4 +17,18 @@ header{
     visibility: visible;
     animation: disappear 1s 3s forwards;  
 }
+
+/* Header */
+header{
+    font-family: "Shrikhand";
+    text-align: center;
+    margin: 0px;
+    padding: 10px 10px 10px 10px;
+    position: relative;
+    @include mixins.box-shadow;
+    h1{
+        margin: 0px;
+    }
+}
+
 
