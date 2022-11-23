@@ -448,6 +448,11 @@ header h1 {
 .menu-item__description {
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .menu-item__description {
+    max-width: 65%;
+  }
+}
 .menu-item__prix {
   margin-left: auto;
   display: flex;
